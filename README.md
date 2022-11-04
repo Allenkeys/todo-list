@@ -8,7 +8,7 @@
 ## Built With
 
 - Major languages: HTML, CSS and Javascript
-- Frameworks: Nodejs
+- Frameworks: Nodejs, Webpack
 - Technologies: Github and Vscode
 
 ## Live Demo
