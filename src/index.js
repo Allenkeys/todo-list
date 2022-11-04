@@ -2,10 +2,12 @@ import './style.css';
 
 const todo = [
   {
+    index: 1,
     description: 'wash the dishes',
     completed: false,
   },
   {
+    index: 1,
     description: 'Complete todo list tasks',
     completed: false,
   },
