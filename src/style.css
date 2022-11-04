@@ -1,7 +1,56 @@
-.hello {
-  color: green;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  color: red;
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.container {
+  min-width: 425px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.container > .btn,
+.refresh {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.refresh {
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-style: italic;
+}
+
+.todo-list {
+  width: 100%;
+}
+
+.task {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  margin-right: auto;
 }
