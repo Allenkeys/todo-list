@@ -7,7 +7,7 @@ const todo = [
     completed: false,
   },
   {
-    index: 1,
+    index: 2,
     description: 'Complete todo list tasks',
     completed: false,
   },
