@@ -48,15 +48,15 @@ form input {
 }
 
 i {
-  color:  rgba(0, 0, 0, 0.5);
-}
-
-i:hover {
-  color:  rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 form i {
   transform: rotate(90deg);
+}
+
+i:hover {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .todo-list {

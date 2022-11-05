@@ -1,5 +1,5 @@
 import './style.css';
-import Todo from './module/app';
+import Todo from './module/app.js';
 
 const form = document.getElementById('form');
 
@@ -17,7 +17,6 @@ const createTask = () => {
   if (localStorage.getItem('todo')) {
     todo.displayTodo();
   }
-
 };
 
 createTask();

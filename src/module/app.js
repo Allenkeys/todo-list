@@ -1,4 +1,4 @@
-import { toLocalStorage, fromLocalStorage } from './utils';
+import { toLocalStorage, fromLocalStorage } from './utils.js';
 
 export default class Todo {
   constructor() {
@@ -16,16 +16,14 @@ export default class Todo {
     return this.details;
   }
 
-  template = (task) => {
-    return `
+  template = (task) => `
     <input type="checkbox"> 
     <textarea data-id=${task.index} class='info'>${task.description}</textarea>
     <i id='remove' data-id=${task.index} class="fa-solid fa-trash-can"></i>
-    `
-  };
+    `;
 
   displayTodo = () => {
-    let todoWrapper = document.querySelector('.todo-list');
+    const todoWrapper = document.querySelector('.todo-list');
     const getLocalData = fromLocalStorage('todo');
     this.details = getLocalData;
     todoWrapper.replaceChildren();
@@ -41,19 +39,19 @@ export default class Todo {
 
   editTask = () => {
     const description = document.querySelectorAll('.info');
-    description.forEach(text => {
+    description.forEach((text) => {
       text.addEventListener('keydown', (e) => {
-        if(e.key === 'Enter') {
+        if (e.key === 'Enter') {
           const target = e.target.value;
           const id = e.target.getAttribute('data-id');
-          this.details.find(item => {
-            if(item.index == Number(id)) {
+          this.details.find((item) => {
+            if (item.index === Number(id)) {
               item.description = target;
             }
             toLocalStorage(this.details);
-            window.location.reload();
+            return window.location.reload();
           });
-        };
+        }
       });
     });
   }
@@ -64,13 +62,14 @@ export default class Todo {
       btn.addEventListener('click', (e) => {
         const id = e.target.getAttribute('data-id');
         this.details = this.details.filter(
-          (el) => el.index !== Number(id)
+          (el) => el.index !== Number(id),
         );
+        /* eslint-disable no-loop-func */
         let count = 1;
-        while(count <= this.details.length) {
-          this.details.forEach(task => {
+        while (count <= this.details.length) {
+          this.details.forEach((task) => {
             task.index = count;
-            count++;
+            count += 1;
           });
         }
         toLocalStorage(this.details);
