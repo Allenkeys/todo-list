@@ -13,7 +13,7 @@ const createTask = () => {
     todo.displayTodo();
     form.reset();
   });
-
+  todo.removeCompleted();
   if (localStorage.getItem('todo')) {
     todo.displayTodo();
   }
