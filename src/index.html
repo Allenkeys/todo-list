@@ -13,8 +13,10 @@
             <p>Today's TODO list</p>
             <i title="click to refresh" class="font-color fa-solid fa-rotate"></i>
         </div>
-        <form action="">
-            <input type="text" placeholder="Add to your list...">
+        <form id="form">
+            <label for="desc"></label>
+            <input id="desc" type="text" placeholder="Add to your list...">
+            <i title="click enter to save task" id="send" class="fa-solid fa-arrow-turn-down"></i>
         </form>
         <div class="todo-list"></div>
         <button class="btn">Clear all completed</button>        

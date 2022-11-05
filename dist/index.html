@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Todo App</title>
-<script defer src="runtime.c497dd2d7bb3bd00ecf2.js"></script><script defer src="main.59a7cd12198463584f3a.js"></script></head>
+<script defer src="runtime.c497dd2d7bb3bd00ecf2.js"></script><script defer src="main.27b7d578cefafd284ab3.js"></script></head>
 <body>
     <section class="container">
         <div class="refresh">
             <p>Today's TODO list</p>
             <i title="click to refresh" class="font-color fa-solid fa-rotate"></i>
         </div>
-        <form action="">
-            <input type="text" placeholder="Add to your list...">
+        <form id="form">
+            <label for="desc"></label>
+            <input id="desc" type="text" placeholder="Add to your list...">
+            <i title="click enter to save task" id="send" class="fa-solid fa-arrow-turn-down"></i>
         </form>
         <div class="todo-list"></div>
         <button class="btn">Clear all completed</button>        

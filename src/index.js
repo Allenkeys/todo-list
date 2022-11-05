@@ -1,31 +1,23 @@
 import './style.css';
+import Todo from './module/app';
 
-const todo = [
-  {
-    index: 1,
-    description: 'wash the dishes',
-    completed: false,
-  },
-  {
-    index: 2,
-    description: 'Complete todo list tasks',
-    completed: false,
-  },
-];
+const form = document.getElementById('form');
 
-const todoWrapper = document.querySelector('.todo-list');
+const todo = new Todo();
 
-const displayTodo = () => {
-  todo.forEach((item) => {
-    const task = document.createElement('div');
-    task.classList.add('task');
-    task.innerHTML = `
-    <input type="checkbox"> 
-    <p class='info'>${item.description}</p>
-    <i class="fa-solid fa-ellipsis-vertical"></i>
-    `;
-    todoWrapper.appendChild(task);
+const createTask = () => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const description = form.elements.desc.value;
+    todo.addTodo(description);
+    todo.displayTodo();
+    form.reset();
   });
+
+  if (localStorage.getItem('todo')) {
+    todo.displayTodo();
+  }
+
 };
 
-displayTodo();
+createTask();
