@@ -59,6 +59,10 @@ i:hover {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.completed {
+  text-decoration: line-through;
+}
+
 .todo-list {
   width: 100%;
 }
