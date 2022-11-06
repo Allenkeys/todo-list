@@ -84,3 +84,7 @@ i:hover {
   resize: none;
   padding-top: 15px;
 }
+
+.info::-webkit-scrollbar {
+  display: none;
+}
