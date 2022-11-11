@@ -33,9 +33,9 @@ export default class Todo {
       task.innerHTML = this.template(item);
       todoWrapper.appendChild(task);
     });
-    this.deleteTask();
     this.editTask();
     this.validate();
+    this.deleteTask();
   };
 
   validate = () => {
